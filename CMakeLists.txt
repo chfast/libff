@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.5)
 
 project (libff)
 # Default to RelWithDebInfo configuration if no configuration is explicitly specified.
