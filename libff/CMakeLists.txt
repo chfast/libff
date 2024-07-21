@@ -81,33 +81,33 @@ target_include_directories(
 )
 
 # Sodium for binary fields.
-find_path(
-    SODIUM_INCLUDE_DIR
-    sodium.h
-    HINTS ${LIBSODIUM_INCLUDE_DIRS}
-    /usr/local/include /opt/local/include /opt/include
-)
-find_library(
-    SODIUM_LIBRARY
-    NAMES sodium
-    HINTS ${LIBSODIUM_LIBRARY_DIRS}
-    /usr/local/lib /opt/local/lib /opt/lib
-)
+#find_path(
+#    SODIUM_INCLUDE_DIR
+#    sodium.h
+#    HINTS ${LIBSODIUM_INCLUDE_DIRS}
+#    /usr/local/include /opt/local/include /opt/include
+#)
+#find_library(
+#    SODIUM_LIBRARY
+#    NAMES sodium
+#    HINTS ${LIBSODIUM_LIBRARY_DIRS}
+#    /usr/local/lib /opt/local/lib /opt/lib
+#)
 
-target_include_directories(
-    ff
-    PUBLIC
-    ${SODIUM_INCLUDE_DIR}
-)
-target_compile_options(
-    ff
-    PUBLIC
-    ${LIBSODIUM_CFLAGS} ${LIBSODIUM_CFLAGS_OTHER}
-)
-target_link_libraries(
-    ff
-    ${SODIUM_LIBRARY} ${LIBSODIUM_LDFLAGS_OTHER}
-)
+#target_include_directories(
+#    ff
+#    PUBLIC
+#    ${SODIUM_INCLUDE_DIR}
+#)
+#target_compile_options(
+#    ff
+#    PUBLIC
+#    ${LIBSODIUM_CFLAGS} ${LIBSODIUM_CFLAGS_OTHER}
+#)
+#target_link_libraries(
+#    ff
+#    ${SODIUM_LIBRARY} ${LIBSODIUM_LDFLAGS_OTHER}
+#)
 
 install(
     DIRECTORY "" DESTINATION "include/libff"
